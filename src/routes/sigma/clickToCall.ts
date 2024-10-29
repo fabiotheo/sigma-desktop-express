@@ -16,6 +16,7 @@ clickToCallRoutes.get('/', async (req, res) => {
     }
 
     const findToken = tokens.find(t => t.token === token);
+    console.log({ tokens });
     if (!findToken) {
         return res.status(401).json({ error: 'Token inválido' });
     }
